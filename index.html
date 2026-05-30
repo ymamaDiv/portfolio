@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT Graduate portfolio — cloud computing, infrastructure, and technical solutions." />
+  <title>Home | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Page load intro -->
+  <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+    <div class="intro-inner">
+      <div class="intro-logo">
+        <span class="intro-bracket">[</span>
+        <span class="intro-text">INITIALIZING</span>
+        <span class="intro-bracket">]</span>
+      </div>
+      <div class="intro-bar"><div class="intro-bar-fill"></div></div>
+      <p class="intro-status">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Mouse follow glow -->
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+  <!-- Background layers -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas class="particles-canvas" id="particlesCanvas" aria-hidden="true"></canvas>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-dot"></span>
+      <span>Portfolio</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero" id="hero" data-parallax="0.3">
+      <div class="hero-parallax-layer" data-parallax="0.15"></div>
+
+      <div class="floating-icons" aria-hidden="true">
+        <div class="float-icon float-icon--cloud" data-parallax="0.08">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M48 44H20a12 12 0 010-24 16 16 0 0131 8 12 12 0 019 16z" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="float-icon float-icon--server" data-parallax="0.12">
+          <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="14" width="40" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="12" y="30" width="40" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="12" y="46" width="40" height="8" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="2" fill="currentColor"/><circle cx="20" cy="36" r="2" fill="currentColor"/></svg>
+        </div>
+        <div class="float-icon float-icon--network" data-parallax="0.06">
+          <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="16" r="6" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="48" r="6" stroke="currentColor" stroke-width="2"/><circle cx="48" cy="48" r="6" stroke="currentColor" stroke-width="2"/><path d="M32 22v12M26 38l-6 4M38 38l6 4M32 34l-10 8M32 34l10 8" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="float-icon float-icon--database" data-parallax="0.1">
+          <svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="18" rx="18" ry="8" stroke="currentColor" stroke-width="2"/><path d="M14 18v28c0 4.4 8.1 8 18 8s18-3.6 18-8V18" stroke="currentColor" stroke-width="2"/><path d="M14 32c0 4.4 8.1 8 18 8s18-3.6 18-8" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-badge reveal-stagger" data-delay="0">IT Graduate · Web Developer</p>
+        <h1 class="hero-title">
+          
+          <span class="letter-reveal hero-title-accent" data-text=" Building Responsive Websites"></span>
+        </h1>
+        <p class="hero-sub reveal-stagger" data-delay="3">
+          IT Graduate focused on web development, automation, and scalable digital problem solving.
+        </p>
+        <div class="hero-cta reveal-stagger" data-delay="4">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll" aria-label="Scroll to about">
+        <span class="hero-scroll-line"></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">01 — About</span>
+          <h2 class="section-title letter-reveal-static" data-text="About Me"></h2>
+        </header>
+        <div class="about-card glass neon-border reveal-on-scroll">
+          <div class="about-glow" aria-hidden="true"></div>
+          <div class="about-content">
+            <p class="about-lead">
+              I am an IT graduate passionate about designing webistes, dashboards, 
+               and building technical solutions that solve real-world problems..
+            </p>
+            <p>
+              My focus spans automated workflows, and responsive web applications.
+              I combine analytical thinking with hands-on implementation to deliver scalable,
+               maintainable solutions for modern digital environment
+            </p>
+            <ul class="about-highlights">
+              <li><span class="highlight-icon">◆</span> Web Development</li>
+              <li><span class="highlight-icon">◆</span> Automation</li>
+              <li><span class="highlight-icon">◆</span> Technical Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">02 — Skills</span>
+          <h2 class="section-title letter-reveal-static" data-text="Technical Skills"></h2>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card glass neon-border reveal-on-scroll" data-delay="0">
+            <!-- <div class="skill-icon">☁</div> 
+            <h3>Cloud Platforms</h3>
+            <p>AWS, Azure fundamentals, virtual machines, storage, and networking services.</p>
+          </article>
+          <article class="skill-card glass neon-border reveal-on-scroll" data-delay="1">
+            <div class="skill-icon">⚙</div>
+            <h3>Infrastructure</h3>
+            <p>Server configuration, backup workflows, monitoring, and system reliability.</p>
+          </article>
+          <article class="skill-card glass neon-border reveal-on-scroll" data-delay="2">
+            <div class="skill-icon">🔒</div>
+            <h3>Data & Security</h3>
+            <p>Secure patient data handling, access control, and compliance-aware design.</p>
+          </article>
+          <article class="skill-card glass neon-border reveal-on-scroll" data-delay="3"> -->
+            <div class="skill-icon">💻</div> 
+            <h3>Development</h3>
+            <p>HTML, CSS, JavaScript, responsive UI, and API integration basics.</p>
+          </article>
+          <article class="skill-card glass neon-border reveal-on-scroll" data-delay="4">
+            <div class="skill-icon">🔄</div>
+            <h3>Automation</h3>
+            <p>Scheduled backups, scripting workflows, and process optimization.</p>
+          </article>
+          <article class="skill-card glass neon-border reveal-on-scroll" data-delay="5">
+            <div class="skill-icon">📊</div>
+            <h3>Problem Solving</h3>
+            <p>Root cause analysis, documentation, and scalable technical planning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">03 — Projects</span>
+          <h2 class="section-title letter-reveal-static" data-text="Featured Work"></h2>
+        </header>
+        <div class="projects-grid">
+          <article class="project-card glass neon-border reveal-on-scroll" data-delay="2">
+            <div class="project-glow-sweep" aria-hidden="true"></div>
+            <div class="project-visual project-visual--web">
+              <svg viewBox="0 0 80 80" fill="none"><rect x="16" y="20" width="48" height="36" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M16 32h48M28 48h24" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Web · UI/UX</span>
+              <h3>Responsive Games Store Website</h3>
+              <p>Modern responsive website with smooth navigation, mobile-first layout, and engaging visual design.</p>
+            <div class="project-actions"> 
+              <a href="https://ymamadiv.github.io/games-store/index.html" target="_blank">
+                           Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card glass neon-border reveal-on-scroll" data-delay="0">
+            <div class="project-glow-sweep" aria-hidden="true"></div>
+            <div class="project-visual project-visual--cloud">
+              <svg viewBox="0 0 80 80" fill="none"><path d="M60 52H28a14 14 0 010-28 18 18 0 0138 10 14 14 0 0110 18z" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Cloud · Healthcare</span>
+              <h3>Cloud Patient Data Storage System</h3>
+              <p>Secure cloud-based storage architecture for patient records with access controls and scalable data management.</p>
+            </div>
+          </article>
+          <article class="project-card glass neon-border reveal-on-scroll" data-delay="1">
+            <div class="project-glow-sweep" aria-hidden="true"></div>
+            <div class="project-visual project-visual--backup">
+              <svg viewBox="0 0 80 80" fill="none"><path d="M40 16v32M28 36l12 12 12-12" stroke="currentColor" stroke-width="1.5"/><rect x="20" y="52" width="40" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Automation · DevOps</span>
+              <h3>Automated Backup Workflow</h3>
+              <p>Scheduled backup pipeline with monitoring, recovery planning, and reduced manual intervention.</p>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Journey -->
+    <section class="section journey" id="journey">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">04 — Journey</span>
+          <h2 class="section-title letter-reveal-static" data-text="Learning Journey"></h2>
+        </header>
+        <div class="timeline" id="timeline">
+          <div class="timeline-track">
+            <div class="timeline-line-bg"></div>
+            <div class="timeline-line-progress" id="timelineProgress"></div>
+            <div class="timeline-progress-dot" id="timelineDot" aria-hidden="true"></div>
+          </div>
+          <div class="timeline-items">
+            <article class="timeline-item reveal-on-scroll" data-delay="0">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card glass neon-border">
+                <span class="timeline-year">2022</span>
+                <h3>IT Foundations</h3>
+                <p>Core programming, networking fundamentals, and systems thinking.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal-on-scroll" data-delay="1">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card glass neon-border">
+                <span class="timeline-year">2023</span>
+                <h3>Cloud & Infrastructure</h3>
+                <p>Virtualization, cloud services, storage models, and server administration.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal-on-scroll" data-delay="2">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card glass neon-border">
+                <span class="timeline-year">2024</span>
+                <h3>Security & Data Systems</h3>
+                <p>Secure architectures, backup strategies, and healthcare data concepts.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal-on-scroll" data-delay="3">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card glass neon-border">
+                <span class="timeline-year">2025</span>
+                <h3>Graduation & Projects</h3>
+                <p>Capstone projects, portfolio development, and industry-ready solutions.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">05 — Experience</span>
+          <h2 class="section-title letter-reveal-static" data-text="Professional Experience"></h2>
+        </header>
+        <div class="experience-cards">
+          <article class="experience-card glass neon-border reveal-on-scroll" data-delay="0">
+            <div class="exp-period">Academic · Projects</div>
+            <h3>Cloud & Systems Projects</h3>
+            <p>Designed and implemented cloud storage solutions, automated backup workflows, and infrastructure documentation for academic and personal projects.</p>
+          </article>
+          <article class="experience-card glass neon-border reveal-on-scroll" data-delay="1">
+            <div class="exp-period">Freelance · Web</div>
+            <h3>Technical Web Development</h3>
+            <p>Built responsive websites with modern UI patterns, performance optimization, and client-focused delivery.</p>
+          </article>
+          <article class="experience-card glass neon-border reveal-on-scroll" data-delay="2">
+            <div class="exp-period">Continuous</div>
+            <h3>Self-Directed Learning</h3>
+            <p>Exploring cloud certifications, automation tools, and emerging infrastructure technologies to stay current.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">06 — Contact</span>
+          <h2 class="section-title letter-reveal-static" data-text="Get In Touch"></h2>
+        </header>
+        <div class="contact-wrapper reveal-on-scroll">
+          <form class="contact-form glass neon-border" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+          </form>
+          <aside class="contact-info glass neon-border">
+            <h3>Have an idea? Let's make it real!</h3>
+            <p>Open to internships, cloud roles, and technical collaborations.</p>
+            <ul class="contact-links">
+              <li><a href="mailto:ymama.hm07@outlook.com">ymama.hm07@outlook.com</a></li>
+              <li><a href="https://www.linkedin.com/in/yamama-alhmoud" 
+                aria-label="LinkedIn" target="_blank">LinkedIn</a></li>
+              <li><a href="#" aria-label="GitHub">GitHub</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>©2026 Designed And Built With ❤️ By YMAMA HAMOUD</p>
+    <div class="footer-glow" aria-hidden="true"></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
